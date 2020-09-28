@@ -1,0 +1,91 @@
+
+:root {
+  --ff-primary:'Acme', sans-serif;
+  --ff-secondary:sans-serif;
+
+  --fw-reg:300;
+  --fw-bold:600;
+
+  --fs-h1:3rem;
+  --fs-h2:2.5rem;
+  --fs-h3:2rem;
+  --fs-body:0.8rem;
+
+  --clr-light:white;
+  --clr-dark:gray;
+  --clr-accent:black;
+
+}
+
+/*general*/
+body {
+  margin: 0;
+  text-align: center;
+  font-family: var(--ff-primary);
+}
+
+/*typography*/
+h1,h2,h3 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+body {font-size: var(--fs-body);}
+
+
+
+/*for Desktop*/
+@media (min-width:800px) {
+    :root {
+      --fs-h1:4rem;
+      --fs-h2:3rem;
+      --fs-h3:2.5rem;
+      --fs-body:1rem;
+    }
+
+    .div-1 {
+      position: relative;
+      background-color: #625261;
+      height: 300px;
+    }
+
+    #my-photo {
+      position: absolute;
+      display:inline;
+      width: 150px;
+      height:auto;
+      top: 75px;
+      left: 31%;
+    }
+
+    .div-1-info {
+      display: inline-block;
+      position: absolute;
+      text-align: left;
+      color: white;
+      top: 75px;
+      left: 46%;
+      margin: 0;
+    }
+
+}
+/*for Mobile*/
+
+@media only screen and (max-width: 700px) {
+    .div-1 {
+      background-color: #625261;
+      height: 240px;
+      text-align: center;
+      padding-top: 10px;
+    }
+    #my-photo {
+        max-width: 100px;
+    }
+
+    .div-1-info {
+      color: var(--clr-light);
+    }
+}
